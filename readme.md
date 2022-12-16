@@ -1,9 +1,12 @@
-Projeto AB2 - Algoritmos para Grafos
+# Projeto AB2 - Algoritmos para Grafos
 
 Foram escolhidos os seguintes quatro algoritmos:
 
-* Bellman-Ford 
-![Badge em Desenvolvimento](https://img.shields.io/badge/Para-grafos-direcionados)
+* Bellman-Ford:
+    * Implementado para grafos direcionados.
 * Dijkstra
+    * Implementado para grafos não-direcionados.
 * Floyd-Warshall
+    * Implementado para grafos não-direcionados.
 * Prim
+    * Implementado para grafos não-direcionados.
