@@ -9,6 +9,9 @@ Foram escolhidos os seguintes quatro algoritmos:
         cd .\bellman-ford\
         g++ .\main.cpp -o main -std=c++11
     ```
+    * Vai mostrar para o usuário:
+        * Distância de vértice fonte para os outros;
+        * Caminho mais curto entre vértice fonte e vértice final;
 * Dijkstra
     * Implementado para grafos não-direcionados.
     * Como rodar:
@@ -16,6 +19,9 @@ Foram escolhidos os seguintes quatro algoritmos:
         cd .\dijkstra\
         g++ .\main.cpp -o main -std=c++11
     ```
+    * Vai mostrar para o usuário:
+        * Distância de vértice fonte para os outros;
+        * Caminho mais curto entre vértice fonte e vértice final;
 * Floyd-Warshall
     * Implementado para grafos não-direcionados.
     * Como rodar:
@@ -23,6 +29,8 @@ Foram escolhidos os seguintes quatro algoritmos:
         cd .\floyd-warshall\
         g++ .\main.cpp -o main -std=c++11
     ```
+    * Vai mostrar para o usuário:
+        * Distância de todos os vértices para todos os vértices;
 * Prim
     * Implementado para grafos não-direcionados.
     * Como rodar:
@@ -30,3 +38,6 @@ Foram escolhidos os seguintes quatro algoritmos:
         cd .\prim\
         g++ .\main.cpp -o main -std=c++11
     ```
+    * Vai mostrar para o usuário:
+        * Árvore geradora mínima;
+        * Custo da árvore geradora mínima;
