@@ -9,7 +9,7 @@ int main() {
     cin >> vertices >> edges; 
     vector<vector<int> > adjacencia(vertices, vector<int> (vertices, 0));
     
-    cout << "Insira as ligações (vertice A, vertice B, peso):\n";
+    cout << "Insira as ligações [grafo nao-direcionado] (vertice A, vertice B, peso):\n";
     for (int i = 0; i < edges; i++) {
         int u, v, peso; 
         cin >> u >> v >> peso;

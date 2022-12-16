@@ -11,7 +11,7 @@ int main() {
     cin >> vertices >> edges; 
     vector<vector<int> > adjacencia(edges * 2, vector<int> (3, 0)); 
 
-    cout << "Insira as ligações (vertice A, vertice B, peso):\n";
+    cout << "Insira as ligações [grafo direcionado] (vertice A, vertice B, peso):\n";
     int u, v, peso; 
     for (int i = 0; i < edges; i++) {
         cin >> u >> v >> peso;
