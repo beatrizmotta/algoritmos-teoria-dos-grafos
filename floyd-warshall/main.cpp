@@ -52,26 +52,25 @@ void floydwarshall(vector<vector<int> > &adj) {
                 if (matriz[i][k] != INT_MAX && matriz[k][j] != INT_MAX
                 && matriz[i][k] + matriz[k][j] < matriz[i][j]) {
                     matriz[i][j] = matriz[i][k] + matriz[k][j];
-                    cout << j << " " << k << "\n";
                 }
 
             }
         }
     }
 
-    // for (int k = 0; k < n; k++) {
-    //     for (int i = 0; i < n; i++) {
-    //         for (int j = 0; j < n; j++) {
-    //             if (matriz[i][k] + matriz[k][j] < matriz[i][j]) {
-    //                 cout << "Esse grafo possui um ciclo negativo\n";
-    //                 exit(0);
-    //             }
+    for (int k = 0; k < n; k++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (matriz[i][k] + matriz[k][j] < matriz[i][j]) {
+                    cout << "Esse grafo possui um ciclo negativo\n";
+                    exit(0);
+                }
 
-    //         }
+            }
 
-    //     }
+        }
 
-    // }
+    }
     cout << "Tabela de distancias entre cada vertice:\n";
 
     print_solve(matriz);
