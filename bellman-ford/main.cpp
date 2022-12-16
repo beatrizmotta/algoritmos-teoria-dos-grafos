@@ -9,7 +9,7 @@ int main() {
     int vertices, edges; 
     cout << "Insira a quantidade de vertices e arestas:\n";
     cin >> vertices >> edges; 
-    vector<vector<int> > adjacencia(edges * 2, vector<int> (3, 0)); 
+    vector<vector<int> > adjacencia(edges, vector<int> (3, 0)); 
 
     cout << "Insira as ligações [grafo direcionado] (vertice A, vertice B, peso):\n";
     int u, v, peso; 
