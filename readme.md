@@ -13,7 +13,7 @@ Foram escolhidos os seguintes quatro algoritmos:
     * Implementado para grafos não-direcionados.
     * Como rodar:
     ```
-        cd .\duhjstra\
+        cd .\dijkstra\
         g++ .\main.cpp -o main -std=c++11
     ```
 * Floyd-Warshall

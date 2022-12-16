@@ -92,5 +92,11 @@ void bellmanford(vector<vector<int> > &adj, int s, int f, int n, int m) {
         cout << '\n';
     }
     cout << "Caminho de " << s << " ate " << f << ":\n";
-    printCaminho(pai, f);
+    if (dist[f] == INT_MAX) {
+        cout << "Nao ha caminho possivel ate " << f;
+        exit(0);
+    } else {
+        printCaminho(pai, f);
+    }
+    
 }
