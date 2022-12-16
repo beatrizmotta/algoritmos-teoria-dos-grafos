@@ -1,5 +1,5 @@
 # Projeto AB2 - Algoritmos para Grafos
-
+![Badge em Desenvolvimento](https://img.shields.io/badge/COMPILADOR-c+11-green)
 Foram escolhidos os seguintes quatro algoritmos:
 
 * Bellman-Ford:

@@ -4,7 +4,7 @@
 
 using namespace std; 
 void print_solve(vector<vector<int> > &matriz);
-void floydwarshall(vector<vector<int> > &adj, int s, int f);
+void floydwarshall(vector<vector<int> > &adj);
 
 int main() {
     int vertices, edges; 
@@ -27,18 +27,13 @@ int main() {
     //     }
     //     cout << '\n';
     // }
-    int fonte, destino; 
-    cout << "\nInsira vertice fonte:\n";
-    cin >> fonte; 
-    cout << "Insira vertice destino:\n";
-    cin >> destino;
 
-    floydwarshall(adjacencia, fonte, destino);
+    floydwarshall(adjacencia);
 
     return 0; 
 }
 
-void floydwarshall(vector<vector<int> > &adj, int s, int f) {
+void floydwarshall(vector<vector<int> > &adj) {
     int i, j, k;
     int n = adj.size();
     vector<vector<int> > matriz(n, vector<int> (n));
@@ -64,19 +59,19 @@ void floydwarshall(vector<vector<int> > &adj, int s, int f) {
         }
     }
 
-    for (int k = 0; k < n; k++) {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (matriz[i][k] + matriz[k][j] < matriz[i][j]) {
-                    cout << "Esse grafo possui um ciclo negativo\n";
-                    exit(0);
-                }
+    // for (int k = 0; k < n; k++) {
+    //     for (int i = 0; i < n; i++) {
+    //         for (int j = 0; j < n; j++) {
+    //             if (matriz[i][k] + matriz[k][j] < matriz[i][j]) {
+    //                 cout << "Esse grafo possui um ciclo negativo\n";
+    //                 exit(0);
+    //             }
 
-            }
+    //         }
 
-        }
+    //     }
 
-    }
+    // }
     cout << "Tabela de distancias entre cada vertice:\n";
 
     print_solve(matriz);
@@ -88,7 +83,7 @@ void print_solve(vector<vector<int> > &matriz) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             if (matriz[i][j] == INT_MAX) {
-                cout << "infinito";
+                cout << "infinito ";
             } else {
                 cout << matriz[i][j] << " ";
             }
