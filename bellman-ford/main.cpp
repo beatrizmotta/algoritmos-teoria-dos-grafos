@@ -37,7 +37,7 @@ void printCaminho(vector<int> &pai, int final) {
 
 void bellmanford(vector<vector<int> > &adj, int s, int f, int n, int m) {
 
-    vector<int> dist (n, INT_MAX);
+    vector<int> dist (n, INT8_MAX);
     vector<int> pai (n, -1);
 
     dist[s] = 0; 
@@ -49,7 +49,7 @@ void bellmanford(vector<vector<int> > &adj, int s, int f, int n, int m) {
         for (int j = 0; j < m; j++) {
 
            if (
-                dist[adj[j][0]] != INT_MAX &&
+                dist[adj[j][0]] != INT8_MAX &&
                 dist[adj[j][0]] + adj[j][2] < dist[adj[j][1]]
            ) {
                 dist[adj[j][1]] = dist[adj[j][0]] + adj[j][2];
@@ -67,7 +67,7 @@ void bellmanford(vector<vector<int> > &adj, int s, int f, int n, int m) {
         int v2 = adj[i][1];
         int peso = adj[i][2];
 
-        if (dist[v1] != INT_MAX && 
+        if (dist[v1] != INT8_MAX && 
             dist[v1] + peso < dist[v2]
         ) {
             cout << "\nEsse grafo possui um ciclo negativo\n";
@@ -84,7 +84,7 @@ void bellmanford(vector<vector<int> > &adj, int s, int f, int n, int m) {
     cout << "Menor de caminho " << s << " ate os demais vertices:\n";
     for (int i = 0; i < n; i++) {
         cout << s << " -> " << i << ": ";
-        if (dist[i] == INT_MAX) {
+        if (dist[i] == INT8_MAX) {
             cout << "infinito";
         } else {
             cout << dist[i];
@@ -92,7 +92,7 @@ void bellmanford(vector<vector<int> > &adj, int s, int f, int n, int m) {
         cout << '\n';
     }
     cout << "Caminho de " << s << " ate " << f << ":\n";
-    if (dist[f] == INT_MAX) {
+    if (dist[f] == INT8_MAX) {
         cout << "Nao ha caminho possivel ate " << f;
         exit(0);
     } else {
