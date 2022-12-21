@@ -13,6 +13,7 @@ int main() {
     vector<vector<int> > adjacencia(vertices, vector<int> (vertices, INT_MAX));
 
     cout << "Insira as ligações [grafo nao-direcionado] (vertice A, vertice B, peso):\n";
+    adjacencia[edges][edges] = 0;
     for (int i = 0; i < edges; i++) {
         int u, v, peso; 
         cin >> u >> v >> peso;
@@ -22,7 +23,6 @@ int main() {
         adjacencia[v][u] = peso;
     }
     
-    adjacencia[vertices][vertices] = 0;
 
     // for (int i = 0; i < vertices; i++) {
     //     for (int j = 0; j < vertices; j++) {
