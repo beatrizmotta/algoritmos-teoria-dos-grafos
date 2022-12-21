@@ -19,8 +19,13 @@ int main() {
 
         adjacencia[u][v] = peso; 
         adjacencia[v][u] = peso; 
-
+        
     }
+
+    // for (int i = 0; i < vertices; i++) {
+    //     adjacencia[i][i] = 0;
+    // }
+
 
     int fonte, destino; 
     cout << "\nInsira vertice fonte:\n";
@@ -44,7 +49,7 @@ int main() {
 // que ainda não foi visitado
 int min(vector<int> &dist, vector<bool> &visited) {
 
-    int mininum = INT_MAX;
+    int mininum = INT8_MAX;
     int index; 
 
     for (int i = 0; i < dist.size(); i++) {
@@ -68,7 +73,7 @@ void printCaminho(vector<int> &pai, int final) {
 
 int dijkstra(vector<vector<int> > &adj, int s, int f) {
     int size = adj.size();
-    vector<int> dist (size, INT_MAX); 
+    vector<int> dist (size, INT8_MAX); 
     vector<int> pai (size, -1);
     vector<bool> visited (size, false); 
 
@@ -82,7 +87,7 @@ int dijkstra(vector<vector<int> > &adj, int s, int f) {
         for (int j = 0; j < size; j++) {
 
             if (!visited[j] &&
-                adj[m][j] && dist[m] != INT_MAX
+                adj[m][j] && dist[m] != INT8_MAX
                 && dist[m] + adj[m][j] < dist[j]
             ){
                 dist[j] = dist[m] + adj[m][j];
@@ -99,7 +104,7 @@ int dijkstra(vector<vector<int> > &adj, int s, int f) {
     cout << "Menor caminho de " << s << " ate os demais vertices:\n";
     for (int i = 0; i < size; i++) {
         cout << s << " -> " << i << ": ";
-        if (dist[i] == INT_MAX) {
+        if (dist[i] == INT8_MAX) {
             cout << "infinito";
         } else {
             cout << dist[i];
@@ -107,7 +112,7 @@ int dijkstra(vector<vector<int> > &adj, int s, int f) {
         cout << '\n';
     }
     cout << "Caminho de " << s << " ate " << f << ":\n";
-    if (dist[f] == INT_MAX) {
+    if (dist[f] == INT8_MAX) {
         cout << "Nao ha caminho possivel ate " << f;
         exit(0);
     } else {

@@ -8,6 +8,7 @@ Foram escolhidos os seguintes quatro algoritmos:
     ```
         cd .\bellman-ford\
         g++ .\main.cpp -o main -std=c++11
+        ./main < entrada.txt
     ```
     * Vai mostrar para o usuário:
         * Distância de vértice fonte para os outros;
@@ -18,6 +19,7 @@ Foram escolhidos os seguintes quatro algoritmos:
     ```
         cd .\dijkstra\
         g++ .\main.cpp -o main -std=c++11
+        ./main < entrada.txt
     ```
     * Vai mostrar para o usuário:
         * Distância de vértice fonte para os outros;
@@ -28,6 +30,7 @@ Foram escolhidos os seguintes quatro algoritmos:
     ```
         cd .\floyd-warshall\
         g++ .\main.cpp -o main -std=c++11
+        ./main < entrada.txt
     ```
     * Vai mostrar para o usuário:
         * Distância de todos os vértices para todos os vértices;
@@ -37,6 +40,7 @@ Foram escolhidos os seguintes quatro algoritmos:
     ```
         cd .\prim\
         g++ .\main.cpp -o main -std=c++11
+        ./main < entrada.txt
     ```
     * Vai mostrar para o usuário:
         * Árvore geradora mínima;

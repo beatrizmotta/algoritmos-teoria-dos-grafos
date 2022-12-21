@@ -10,27 +10,23 @@ int main() {
     int vertices, edges; 
     cout << "Insira a quantidade de vertices e arestas:\n";
     cin >> vertices >> edges; 
-    vector<vector<int> > adjacencia(vertices, vector<int> (vertices, INT_MAX));
+    vector<vector<int> > adjacencia(vertices, vector<int> (vertices, INT8_MAX));
 
     cout << "Insira as ligações [grafo nao-direcionado] (vertice A, vertice B, peso):\n";
-    adjacencia[edges][edges] = 0;
+    
+    for (int i = 0; i < vertices; i++) {
+        adjacencia[i][i] = 0; 
+    }
+
+
     for (int i = 0; i < edges; i++) {
         int u, v, peso; 
         cin >> u >> v >> peso;
-        adjacencia[i][i] = 0;
-   
+        
         adjacencia[u][v] = peso;
         adjacencia[v][u] = peso;
     }
     
-
-    // for (int i = 0; i < vertices; i++) {
-    //     for (int j = 0; j < vertices; j++) {
-    //         cout << adjacencia[i][j] << " ";
-    //     }
-    //     cout << '\n';
-    // }
-
     floydwarshall(adjacencia);
 
     return 0; 
@@ -52,7 +48,7 @@ void floydwarshall(vector<vector<int> > &adj) {
         for (i = 0; i < n; i++) {
             for (j = 0; j < n; j++) {
 
-                if (matriz[i][k] != INT_MAX && matriz[k][j] != INT_MAX
+                if (matriz[i][k] != INT8_MAX && matriz[k][j] != INT8_MAX
                 && matriz[i][k] + matriz[k][j] < matriz[i][j]) {
                     matriz[i][j] = matriz[i][k] + matriz[k][j];
                 }
@@ -84,7 +80,7 @@ void print_solve(vector<vector<int> > &matriz) {
     int n = matriz.size();
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            if (matriz[i][j] == INT_MAX) {
+            if (matriz[i][j] == INT8_MAX) {
                 cout << "infinito ";
             } else {
                 cout << matriz[i][j] << " ";
