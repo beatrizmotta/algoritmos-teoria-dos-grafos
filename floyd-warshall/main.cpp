@@ -17,9 +17,12 @@ int main() {
         int u, v, peso; 
         cin >> u >> v >> peso;
         adjacencia[i][i] = 0;
+   
         adjacencia[u][v] = peso;
         adjacencia[v][u] = peso;
     }
+    
+    adjacencia[v][v] = 0;
 
     // for (int i = 0; i < vertices; i++) {
     //     for (int j = 0; j < vertices; j++) {
