@@ -14,7 +14,6 @@ int main() {
 
     cout << "Insira as ligações [grafo nao-direcionado] (vertice A, vertice B, peso):\n";
     for (int i = 0; i < edges; i++) {
-        cout << "a" << i << "a";
         int u, v, peso; 
         cin >> u >> v >> peso;
         adjacencia[i][i] = 0;
