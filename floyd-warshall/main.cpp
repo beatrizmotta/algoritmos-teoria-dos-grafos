@@ -22,7 +22,7 @@ int main() {
         adjacencia[v][u] = peso;
     }
     
-    adjacencia[v][v] = 0;
+    adjacencia[vertices][vertices] = 0;
 
     // for (int i = 0; i < vertices; i++) {
     //     for (int j = 0; j < vertices; j++) {
