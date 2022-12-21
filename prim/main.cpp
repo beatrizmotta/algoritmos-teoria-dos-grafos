@@ -22,14 +22,6 @@ int main() {
         adjacencia[v][u] = peso;
     }
 
-    for (int i = 0; i < vertices; i++) {
-        cout << "{";
-        for (int j = 0; j < vertices; j++) {
-            cout << adjacencia[i][j] << ",";
-        }
-        cout << "},";
-    }
-
     int fonte; 
     cout << "Insira o vertice fonte:\n";
     cin >> fonte;
@@ -44,8 +36,8 @@ void printTree(vector<int> &pai, vector<vector<int> > &adj) {
     int n = pai.size();
     int custo_minimo_total = 0;
     for (int i = 0; i < n; i++) {
-        custo_minimo_total += adj[i][pai[i]];
         if (pai[i] != -1) {
+            custo_minimo_total += adj[i][pai[i]];
             cout << pai[i] << " - " << i << " \t"
                 << adj[i][pai[i]] << " \n";
         }
@@ -56,7 +48,7 @@ void printTree(vector<int> &pai, vector<vector<int> > &adj) {
 
 int min(vector<int> &key, vector<bool> &visited) {
     
-    int min = INT8_MAX, index;
+    int min = INT_MAX, index;
     int n = visited.size();
 
     for (int v = 0; v < n; v++)
@@ -70,11 +62,11 @@ void prim(vector<vector<int> > &adj, int s) {
 	int n = adj.size();
     vector<int> pai;
     pai.resize(n);
-	vector<int> key (n, INT8_MAX);
+	vector<int> key (n, INT_MAX);
 	vector<bool> visited (n, false);
 
 	// for (int i = 0; i < n; i++)
-	// 	key[i] = INT8_MAX, visited[i] = false;
+	// 	key[i] = INT_MAX, visited[i] = false;
 
 	key[s] = 0;
 	pai[s] = -1;
