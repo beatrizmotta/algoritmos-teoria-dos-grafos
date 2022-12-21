@@ -8,11 +8,11 @@ int dijkstra(vector<vector<int> > &adj, int s, int f);
 
 int main() {
     int vertices, edges; 
-    cout << "Insira a quantidade de vertices e arestas:\n";
+    // cout << "Insira a quantidade de vertices e arestas:\n";
     cin >> vertices >> edges; 
     vector<vector<int> > adjacencia(vertices, vector<int> (vertices, 0)); 
 
-    cout << "Insira as ligações [grafo nao direcionado] (vertice A, vertice B, peso):\n";
+    // cout << "Insira as ligações [grafo nao direcionado] (vertice A, vertice B, peso):\n";
     int u, v, peso; 
     for (int i = 0; i < edges; i++) {
         cin >> u >> v >> peso;
@@ -23,9 +23,9 @@ int main() {
     }
 
     int fonte, destino; 
-    cout << "\nInsira vertice fonte:\n";
+    // cout << "\nInsira vertice fonte:\n";
     cin >> fonte; 
-    cout << "Insira vertice destino:\n";
+    // cout << "Insira vertice destino:\n";
     cin >> destino;
 
     // for (int i = 0; i < vertices; i++) {
